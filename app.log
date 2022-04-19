@@ -1,0 +1,414 @@
+2022-04-15 11:56:43 INFO      * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.1.3:3111 (Press CTRL+C to quit)
+2022-04-15 11:57:31 INFO     127.0.0.1 - - [15/Apr/2022 11:57:31] "GET / HTTP/1.1" 200 -
+2022-04-15 11:57:31 INFO     127.0.0.1 - - [15/Apr/2022 11:57:31] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-15 11:58:06 INFO     About Us page is retrieved
+2022-04-15 11:58:06 INFO     127.0.0.1 - - [15/Apr/2022 11:58:06] "GET /about HTTP/1.1" 200 -
+2022-04-15 11:58:06 INFO     127.0.0.1 - - [15/Apr/2022 11:58:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-15 11:58:38 INFO     127.0.0.1 - - [15/Apr/2022 11:58:38] "GET / HTTP/1.1" 200 -
+2022-04-15 11:58:38 INFO     127.0.0.1 - - [15/Apr/2022 11:58:38] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-15 11:58:38 INFO     127.0.0.1 - - [15/Apr/2022 11:58:38] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-15 11:58:52 INFO     127.0.0.1 - - [15/Apr/2022 11:58:52] "GET /create HTTP/1.1" 200 -
+2022-04-15 11:58:52 INFO     127.0.0.1 - - [15/Apr/2022 11:58:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-15 11:59:00 INFO     New title test is created
+2022-04-15 11:59:00 INFO     127.0.0.1 - - [15/Apr/2022 11:59:00] "[32mPOST /create HTTP/1.1[0m" 302 -
+2022-04-15 11:59:00 INFO     127.0.0.1 - - [15/Apr/2022 11:59:00] "GET / HTTP/1.1" 200 -
+2022-04-15 11:59:00 INFO     127.0.0.1 - - [15/Apr/2022 11:59:00] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-15 11:59:31 INFO     127.0.0.1 - - [15/Apr/2022 11:59:31] "GET / HTTP/1.1" 200 -
+2022-04-15 11:59:31 INFO     127.0.0.1 - - [15/Apr/2022 11:59:31] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-15 11:59:31 INFO     127.0.0.1 - - [15/Apr/2022 11:59:31] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-15 11:59:56 INFO     health request successfull
+2022-04-15 11:59:56 INFO     127.0.0.1 - - [15/Apr/2022 11:59:56] "GET /healthz HTTP/1.1" 200 -
+2022-04-15 12:00:22 INFO     127.0.0.1 - - [15/Apr/2022 12:00:22] "GET / HTTP/1.1" 200 -
+2022-04-15 12:00:22 INFO     127.0.0.1 - - [15/Apr/2022 12:00:22] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-15 12:00:22 INFO     127.0.0.1 - - [15/Apr/2022 12:00:22] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-15 12:00:27 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 53, in metrics
+    response=json.dumps({"status":"success","code":0,"data":{"db_connection_count":postscount,"post_count":postscount}}),
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/json/__init__.py", line 131, in dumps
+    return _json.dumps(obj, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/json/__init__.py", line 50, in default
+    return super().default(o)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Row is not JSON serializable
+2022-04-15 12:00:27 INFO     127.0.0.1 - - [15/Apr/2022 12:00:27] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2022-04-16 09:03:25 INFO     127.0.0.1 - - [16/Apr/2022 09:03:25] "GET / HTTP/1.1" 200 -
+2022-04-16 09:03:25 INFO     127.0.0.1 - - [16/Apr/2022 09:03:25] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 09:03:30 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 53, in metrics
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/json/__init__.py", line 131, in dumps
+    return _json.dumps(obj, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/json/__init__.py", line 50, in default
+    return super().default(o)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Row is not JSON serializable
+2022-04-16 09:03:30 INFO     127.0.0.1 - - [16/Apr/2022 09:03:30] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2022-04-16 09:03:34 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 53, in metrics
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/json/__init__.py", line 131, in dumps
+    return _json.dumps(obj, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/json/__init__.py", line 50, in default
+    return super().default(o)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Row is not JSON serializable
+2022-04-16 09:03:34 INFO     127.0.0.1 - - [16/Apr/2022 09:03:34] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2022-04-16 09:04:55 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 53, in metrics
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/json/__init__.py", line 131, in dumps
+    return _json.dumps(obj, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/json/__init__.py", line 50, in default
+    return super().default(o)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Row is not JSON serializable
+2022-04-16 09:04:55 INFO     127.0.0.1 - - [16/Apr/2022 09:04:55] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2022-04-16 09:07:19 INFO      * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.1.3:3111 (Press CTRL+C to quit)
+2022-04-16 09:07:24 INFO     Metrics request successfull [<sqlite3.Row object at 0x7fb0ca8a8530>]
+2022-04-16 09:07:24 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 56, in metrics
+    return response
+NameError: name 'response' is not defined
+2022-04-16 09:07:24 INFO     127.0.0.1 - - [16/Apr/2022 09:07:24] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2022-04-16 09:09:20 INFO     Metrics request successfull [<sqlite3.Row object at 0x7fb0ca8a8810>]
+2022-04-16 09:09:20 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 56, in metrics
+    mimetype='application/json'
+NameError: name 'response' is not defined
+2022-04-16 09:09:20 INFO     127.0.0.1 - - [16/Apr/2022 09:09:20] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2022-04-16 09:11:49 INFO     Metrics request successfull [<sqlite3.Row object at 0x7fb0ca8a89d0>]
+2022-04-16 09:11:49 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 56, in metrics
+    mimetype='application/json'
+NameError: name 'response' is not defined
+2022-04-16 09:11:49 INFO     127.0.0.1 - - [16/Apr/2022 09:11:49] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2022-04-16 09:14:53 INFO      * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.1.3:3111 (Press CTRL+C to quit)
+2022-04-16 09:14:58 INFO     Metrics request successfull [<sqlite3.Row object at 0x7fc4996b9530>]
+2022-04-16 09:14:58 INFO     127.0.0.1 - - [16/Apr/2022 09:14:58] "GET /metrics HTTP/1.1" 200 -
+2022-04-16 09:26:48 INFO      * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.1.3:3111 (Press CTRL+C to quit)
+2022-04-16 09:26:58 INFO     Metrics request successfull 7
+2022-04-16 09:26:58 INFO     127.0.0.1 - - [16/Apr/2022 09:26:58] "GET /metrics HTTP/1.1" 200 -
+2022-04-16 09:38:41 INFO      * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.1.3:3111 (Press CTRL+C to quit)
+2022-04-16 09:38:46 INFO     Metrics request successfull 7
+2022-04-16 09:38:46 INFO     127.0.0.1 - - [16/Apr/2022 09:38:46] "GET /metrics HTTP/1.1" 200 -
+2022-04-16 09:46:30 INFO      * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.1.3:3111 (Press CTRL+C to quit)
+2022-04-16 09:46:34 INFO     Metrics request successfull 7
+2022-04-16 09:46:34 INFO     127.0.0.1 - - [16/Apr/2022 09:46:34] "GET /metrics HTTP/1.1" 200 -
+2022-04-16 10:16:16 INFO      * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.1.3:3111 (Press CTRL+C to quit)
+2022-04-16 10:16:22 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 52, in metrics
+    connection = get_db_connection()
+  File "app.py", line 13, in get_db_connection
+    dbcount += 1
+UnboundLocalError: local variable 'dbcount' referenced before assignment
+2022-04-16 10:16:22 INFO     127.0.0.1 - - [16/Apr/2022 10:16:22] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2022-04-16 10:20:27 INFO      * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.1.3:3111 (Press CTRL+C to quit)
+2022-04-16 10:20:31 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 52, in metrics
+    connection = get_db_connection()
+  File "app.py", line 13, in get_db_connection
+    dbcount = dbcount + 1
+UnboundLocalError: local variable 'dbcount' referenced before assignment
+2022-04-16 10:20:31 INFO     127.0.0.1 - - [16/Apr/2022 10:20:31] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2022-04-16 10:29:16 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 52, in metrics
+    @app.route('/metrics')
+  File "app.py", line 13, in get_db_connection
+UnboundLocalError: local variable 'dbcount' referenced before assignment
+2022-04-16 10:29:16 INFO     127.0.0.1 - - [16/Apr/2022 10:29:16] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2022-04-16 10:29:24 INFO      * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.1.3:3111 (Press CTRL+C to quit)
+2022-04-16 10:29:28 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ganeshhariharan/Documents/udacity/cna/nd064_course_1/project/techtrends/venv/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 54, in metrics
+    connection = get_db_connection()
+  File "app.py", line 14, in get_db_connection
+    dbcount = dbcount + 1
+UnboundLocalError: local variable 'dbcount' referenced before assignment
+2022-04-16 10:29:28 INFO     127.0.0.1 - - [16/Apr/2022 10:29:28] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2022-04-16 10:35:17 INFO      * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.1.3:3111 (Press CTRL+C to quit)
+2022-04-16 10:35:21 INFO     Metrics request successfull 7
+2022-04-16 10:35:21 INFO     127.0.0.1 - - [16/Apr/2022 10:35:21] "GET /metrics HTTP/1.1" 200 -
+2022-04-16 10:36:17 INFO     127.0.0.1 - - [16/Apr/2022 10:36:17] "GET / HTTP/1.1" 200 -
+2022-04-16 10:36:17 INFO     127.0.0.1 - - [16/Apr/2022 10:36:17] "GET /static/css/main.css HTTP/1.1" 200 -
+2022-04-16 10:36:23 INFO     health request successfull
+2022-04-16 10:36:23 INFO     127.0.0.1 - - [16/Apr/2022 10:36:23] "GET /healthz HTTP/1.1" 200 -
+2022-04-16 10:36:30 INFO     health request successfull
+2022-04-16 10:36:30 INFO     127.0.0.1 - - [16/Apr/2022 10:36:30] "GET /healthz HTTP/1.1" 200 -
+2022-04-16 10:36:31 INFO     127.0.0.1 - - [16/Apr/2022 10:36:31] "GET / HTTP/1.1" 200 -
+2022-04-16 10:36:31 INFO     127.0.0.1 - - [16/Apr/2022 10:36:31] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:36:31 INFO     127.0.0.1 - - [16/Apr/2022 10:36:31] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:36:32 INFO     Metrics request successfull 7
+2022-04-16 10:36:32 INFO     127.0.0.1 - - [16/Apr/2022 10:36:32] "GET /metrics HTTP/1.1" 200 -
+2022-04-16 10:36:33 INFO     Metrics request successfull 7
+2022-04-16 10:36:33 INFO     127.0.0.1 - - [16/Apr/2022 10:36:33] "GET /metrics HTTP/1.1" 200 -
+2022-04-16 10:37:01 INFO     127.0.0.1 - - [16/Apr/2022 10:37:01] "GET / HTTP/1.1" 200 -
+2022-04-16 10:37:01 INFO     127.0.0.1 - - [16/Apr/2022 10:37:01] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:37:01 INFO     127.0.0.1 - - [16/Apr/2022 10:37:01] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:37:07 INFO     Article <sqlite3.Row object at 0x7f9ffa8ea670> retrieved!
+2022-04-16 10:37:07 INFO     127.0.0.1 - - [16/Apr/2022 10:37:07] "GET /2 HTTP/1.1" 200 -
+2022-04-16 10:37:07 INFO     127.0.0.1 - - [16/Apr/2022 10:37:07] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:37:09 INFO     127.0.0.1 - - [16/Apr/2022 10:37:09] "GET / HTTP/1.1" 200 -
+2022-04-16 10:37:09 INFO     127.0.0.1 - - [16/Apr/2022 10:37:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:37:09 INFO     127.0.0.1 - - [16/Apr/2022 10:37:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:37:09 INFO     127.0.0.1 - - [16/Apr/2022 10:37:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:37:10 INFO     Article <sqlite3.Row object at 0x7f9ffa8ea9d0> retrieved!
+2022-04-16 10:37:10 INFO     127.0.0.1 - - [16/Apr/2022 10:37:10] "GET /1 HTTP/1.1" 200 -
+2022-04-16 10:37:10 INFO     Article <sqlite3.Row object at 0x7f9ffa8ea570> retrieved!
+2022-04-16 10:37:10 INFO     127.0.0.1 - - [16/Apr/2022 10:37:10] "GET /1 HTTP/1.1" 200 -
+2022-04-16 10:37:10 INFO     127.0.0.1 - - [16/Apr/2022 10:37:10] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:37:14 INFO     127.0.0.1 - - [16/Apr/2022 10:37:14] "GET / HTTP/1.1" 200 -
+2022-04-16 10:37:14 INFO     127.0.0.1 - - [16/Apr/2022 10:37:14] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:37:14 INFO     127.0.0.1 - - [16/Apr/2022 10:37:14] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:37:15 INFO     Metrics request successfull 7
+2022-04-16 10:37:15 INFO     127.0.0.1 - - [16/Apr/2022 10:37:15] "GET /metrics HTTP/1.1" 200 -
+2022-04-16 10:40:00 INFO      * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.1.3:3111 (Press CTRL+C to quit)
+2022-04-16 10:40:03 INFO     Metrics request successfull 7
+2022-04-16 10:40:03 INFO     127.0.0.1 - - [16/Apr/2022 10:40:03] "GET /metrics HTTP/1.1" 200 -
+2022-04-16 10:40:10 INFO     127.0.0.1 - - [16/Apr/2022 10:40:10] "GET / HTTP/1.1" 200 -
+2022-04-16 10:40:10 INFO     127.0.0.1 - - [16/Apr/2022 10:40:10] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:40:10 INFO     127.0.0.1 - - [16/Apr/2022 10:40:10] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:40:13 INFO     Article 1 retrieved!
+2022-04-16 10:40:13 INFO     127.0.0.1 - - [16/Apr/2022 10:40:13] "GET /1 HTTP/1.1" 200 -
+2022-04-16 10:40:13 INFO     Article 1 retrieved!
+2022-04-16 10:40:13 INFO     127.0.0.1 - - [16/Apr/2022 10:40:13] "GET /1 HTTP/1.1" 200 -
+2022-04-16 10:40:13 INFO     127.0.0.1 - - [16/Apr/2022 10:40:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:41:19 INFO      * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.1.3:3111 (Press CTRL+C to quit)
+2022-04-16 10:41:25 INFO     Article KubeCon + CloudNativeCon 2021 retrieved!
+2022-04-16 10:41:25 INFO     127.0.0.1 - - [16/Apr/2022 10:41:25] "GET /2 HTTP/1.1" 200 -
+2022-04-16 10:41:25 INFO     127.0.0.1 - - [16/Apr/2022 10:41:25] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:41:46 INFO     127.0.0.1 - - [16/Apr/2022 10:41:46] "GET /create HTTP/1.1" 200 -
+2022-04-16 10:41:46 INFO     127.0.0.1 - - [16/Apr/2022 10:41:46] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:41:59 INFO     New title test2 is created
+2022-04-16 10:41:59 INFO     127.0.0.1 - - [16/Apr/2022 10:41:59] "[32mPOST /create HTTP/1.1[0m" 302 -
+2022-04-16 10:41:59 INFO     127.0.0.1 - - [16/Apr/2022 10:41:59] "GET / HTTP/1.1" 200 -
+2022-04-16 10:41:59 INFO     127.0.0.1 - - [16/Apr/2022 10:41:59] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:42:23 INFO     About Us page is retrieved
+2022-04-16 10:42:23 INFO     127.0.0.1 - - [16/Apr/2022 10:42:23] "GET /about HTTP/1.1" 200 -
+2022-04-16 10:42:23 INFO     127.0.0.1 - - [16/Apr/2022 10:42:23] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:42:52 INFO     127.0.0.1 - - [16/Apr/2022 10:42:52] "GET / HTTP/1.1" 200 -
+2022-04-16 10:42:52 INFO     127.0.0.1 - - [16/Apr/2022 10:42:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:42:52 INFO     127.0.0.1 - - [16/Apr/2022 10:42:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:43:03 INFO     Article 2020 CNCF Annual Report retrieved!
+2022-04-16 10:43:03 INFO     127.0.0.1 - - [16/Apr/2022 10:43:03] "GET /1 HTTP/1.1" 200 -
+2022-04-16 10:43:03 INFO     127.0.0.1 - - [16/Apr/2022 10:43:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:43:11 INFO     Article 2020 CNCF Annual Report retrieved!
+2022-04-16 10:43:11 INFO     127.0.0.1 - - [16/Apr/2022 10:43:11] "GET /1 HTTP/1.1" 200 -
+2022-04-16 10:43:11 INFO     Article 2020 CNCF Annual Report retrieved!
+2022-04-16 10:43:11 INFO     127.0.0.1 - - [16/Apr/2022 10:43:11] "GET /1 HTTP/1.1" 200 -
+2022-04-16 10:43:11 INFO     127.0.0.1 - - [16/Apr/2022 10:43:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-04-16 10:43:12 INFO     Non-existing arcticle is accessed
+2022-04-16 10:43:12 INFO     127.0.0.1 - - [16/Apr/2022 10:43:12] "[33mGET /10 HTTP/1.1[0m" 404 -
+2022-04-16 10:43:12 INFO     127.0.0.1 - - [16/Apr/2022 10:43:12] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.1.3:3111 (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:49:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:49:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:49:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Article 2020 CNCF Annual Report retrieved!
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:49:47] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:49:47] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.1.3:3111 (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:51:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:51:19] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:51:19] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Article 2020 CNCF Annual Report retrieved!
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:51:32] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:51:32] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:51:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:51:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:51:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Metrics request successfull 8
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:51:46] "GET /metrics HTTP/1.1" 200 -
+INFO:app:Metrics request successfull 8
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:51:49] "GET /metrics HTTP/1.1" 200 -
+INFO:app:Metrics request successfull 8
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:51:50] "GET /metrics HTTP/1.1" 200 -
+INFO:app:health request successfull
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:51:58] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:52:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:52:12] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:52:12] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:About Us page is retrieved
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:52:15] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:52:15] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:52:18] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:52:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:New title test3 is created
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:52:27] "[32mPOST /create HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:52:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:52:27] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:53:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:53:02] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:53:02] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Article 2020 CNCF Annual Report retrieved!
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:53:03] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:53:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Non-existing article is accessed
+INFO:app:Non-existing article is accessed
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:53:04] "[33mGET /15 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:53:04] "[33mGET /15 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2022 10:53:04] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
